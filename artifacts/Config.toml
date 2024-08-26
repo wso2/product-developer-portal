@@ -1,0 +1,18 @@
+storage = 'DB'
+adminURL = 'http://localhost:8080/admin/orgFiles?orgName='
+
+[origins]
+allowedOrigins = ["http://localhost:3000"]
+
+[devportal.store]
+host = "localhost"
+port = 5432
+user = "postgres"
+password = "postgres"
+database = "devportal"
+
+[devportal.models]
+awsAccessKeyId = ""
+awsSecretAccessKey = ""
+awsRegion = ""
+
