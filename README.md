@@ -6,7 +6,7 @@
    - Fork the repository to your GitHub account.
    - Clone the repository using:
      ```bash
-     git clone https://github.com/DivyaPremanantha/devportal-developer-webapp.git
+     git clone https://github.com/wso2/api-developer-portal.git
      ```
    
 **Install Dependencies**
