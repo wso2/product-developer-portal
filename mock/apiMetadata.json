@@ -9,6 +9,9 @@
                 "reservations"
             ],
             "authenticate": true,
+            "apiDescription": "API for managing accommodations and reservations in a specified city",
+            "apiVersion" : "1.1.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Accommodation API",
@@ -32,6 +35,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for retrieving information about leisure activities and managing reservations",
+            "apiVersion" : "2.1.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Leisure Activities API",
@@ -55,6 +61,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for retrieving information about famous attractions in various cities",
+            "apiVersion" : "2.0.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Famous Attractions API",
@@ -78,6 +87,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for checking hotel availability and managing hotel reservations in a specified city",
+            "apiVersion" : "1.1.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Hotel Availability API",
@@ -102,6 +114,9 @@
                 "reservations"
             ],
             "authenticate": true,
+            "apiDescription": "API for managing accommodations and reservations in a specified city",
+            "apiVersion" : "1.0.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Accommodation API",
@@ -125,6 +140,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for retrieving information about leisure activities and managing reservations",
+            "apiVersion" : "1.0.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Leisure Activities API",
@@ -148,6 +166,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for retrieving information about famous attractions in various cities",
+            "apiVersion" : "1.0.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Famous Attractions API",
@@ -171,6 +192,9 @@
                 "activities",
                 "reservations"
             ],
+            "apiDescription": "API for checking hotel availability and managing hotel reservations in a specified city",
+            "apiVersion" : "1.0.0",
+            "apiType" : "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Hotel Availability API",
