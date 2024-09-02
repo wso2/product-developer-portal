@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/DivyaPremanantha/devportal-developer-webapp#readme",
   "dependencies": {
-    "devportal-webapp": "^1.0.40"
+    "devportal-webapp": "^1.0.41"
   }
 }
