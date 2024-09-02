@@ -8,6 +8,9 @@
       "activities",
       "reservations"
     ],
+    "apiDescription": "API for retrieving information about leisure activities and managing reservations",
+    "apiVersion": "2.1.0",
+    "apiType": "REST",
     "openApiDefinition": {
       "openapi": "3.0.1",
       "info": {

@@ -7,6 +7,9 @@
       "activities",
       "reservations"
     ],
+    "apiDescription": "API for retrieving information about famous attractions in various cities",
+    "apiVersion" : "2.0.0",
+    "apiType" : "REST",
     "openApiDefinition": {
       "openapi": "3.0.1",
       "info": {

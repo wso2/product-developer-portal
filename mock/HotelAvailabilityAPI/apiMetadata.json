@@ -501,6 +501,9 @@
         }
       }
     },
+    "apiDescription": "API for checking hotel availability and managing hotel reservations in a specified city",
+    "apiVersion" : "1.1.0",
+    "apiType" : "REST",
     "apiArtifacts": {
       "apiImages": {
         "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/hotel-availability.jpeg"
