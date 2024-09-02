@@ -35,7 +35,7 @@
    - Explore the pages.
 
    - To start the project without any data, create a database and execute the script.sql under the artifacts folder
-   
+
    - Run the following command.
       ```bash
      npm run single-tenant
@@ -70,7 +70,7 @@
                   \"tags\": \"Transportation Travel Navigation\",
                   \"apiDescription\": \"API for retrieving information about hotels and managing reservations\",
                   \"apiVersion\" : \"3.0.1\",
-                  \"apiType\" : \"ASYNC\",
+                  \"apiType\" : \"AsyncAPI\",
                   \"additionalProperties\": {
                      \"Key\": \"value\"
                   },
@@ -94,6 +94,7 @@
          }"; type=application/json' \
       --form 'api-definition={api-definition file}'
    ```
+-  The apiType values include REST, AsyncAPI, GraphQL or SOAP
 
 -  This is a multi part request containing a json with metadata related to the API and a file attachement of the api schema definition file.
 
