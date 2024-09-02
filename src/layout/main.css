@@ -158,27 +158,23 @@
 .api-md-content h1 {
   font-size: 30px;
   color: var(--main-text-color);
-  margin-bottom: 20px;
 }
 
 .api-md-content h3,h2 {
   font-size: 24px;
   color: var(--main-text-color);
-  margin-bottom: 10px;
 }
 
 /* --SubTitle-- */
 .api-md-content h4,h5,h6 {
   font-size: 20px;
   color: var(--main-text-color);
-  margin-bottom: 20px;
 }
 
 /* --Paragraph-- */
 .api-md-content p {
   font-size: 15px;
   color: var(--main-text-color);
-  margin-bottom: 20px;
 }
 
 .api-md-content li {

@@ -7,6 +7,9 @@
       "activities",
       "reservations"
     ],
+    "apiDescription": "API for retrieving information about famous attractions in various cities",
+    "apiVersion" : "2.0.0",
+    "apiType" : "REST",
     "openApiDefinition": {
       "openapi": "3.0.1",
       "info": {
@@ -242,8 +245,7 @@
     },
     "apiArtifacts": {
       "apiImages": {
-        "api-landing-page-image": "https://d30n1aq29wj74v.cloudfront.net/ABCOrganization/frame.png",
-        "api-detail-page-image": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/accommodation-mini.jpeg"
+        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/attractions.jpeg"
       }
     }
   },

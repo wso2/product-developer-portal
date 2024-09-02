@@ -16,8 +16,7 @@
   height: 50px;
 }
 
-.navbar-nav,
-a {
+.navbar-nav a {
   font-size: 14px;
   justify-content: center;
   align-items: center;

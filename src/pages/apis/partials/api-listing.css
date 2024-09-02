@@ -191,3 +191,10 @@ hr {
 .apilistbtn-secondary:hover {
   color: var(--dark-color);
 }
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 3px; 
+}
