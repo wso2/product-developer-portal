@@ -19,6 +19,9 @@
    - Create a database.
    - Install java.
 
+**Configs**
+   - In the Config.toml, under the devportal.store section, change the configs accordingly.
+
 **Start the Project**
 
 ***Single Tenant***
@@ -31,7 +34,9 @@
 
    - Explore the pages.
 
-   - To start the project without any data, run the following command.
+   - To start the project without any data, create a database and execute the script.sql under the artifacts folder
+   
+   - Run the following command.
       ```bash
      npm run single-tenant
      ```

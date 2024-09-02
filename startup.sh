@@ -15,9 +15,7 @@ export PGPASSWORD=$password
 
 if [ "$tenant" == "dev" ]; then
     psql -q -U "$user" -d "$database" -h "$host" -p "$port" -f artifacts/data-dump.sql
-else
-    psql -q -U "$user" -d "$database" -h "$host" -p "$port" -f artifacts/script.sql
-fi
+
 
 # Unset the password variable for security
 unset PGPASSWORD
