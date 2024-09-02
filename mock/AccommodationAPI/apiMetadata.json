@@ -3,16 +3,15 @@
     "apiName": "AccommodationAPI",
     "apiCategory": "Transportation",
     "tags": [
-      "Payment",
-      "Trending",
-      "REST",
-      "Recently Added",
-      "Status",
-      "Transaction",
-      "PSD2"
+      "leisure",
+      "activities",
+      "reservations"
     ],
+    "apiDescription": "API for managing accommodations and reservations in a specified city",
+    "apiVersion": "1.1.0",
+    "apiType": "REST",
     "openApiDefinition": {
-      "openapi": "3.0.1",
+      "openapi": "1.1.0",
       "info": {
         "title": "Accommodation API",
         "description": "API for managing accommodations and reservations in a specified city",
@@ -507,8 +506,7 @@
     },
     "apiArtifacts": {
       "apiImages": {
-        "api-landing-page-image": "https://d30n1aq29wj74v.cloudfront.net/ABCOrganization/frame.png",
-        "api-detail-page-image": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/accommodation-mini.jpeg"
+        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ABCOrganization/api.svg"
       }
     }
   },
