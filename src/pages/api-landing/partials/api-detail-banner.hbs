@@ -23,7 +23,7 @@
         {{#in apiMetadata.apiInfo.apiType values="REST,AsyncAPI,GraphQL"}}
           <a type="button" class="common-btn-primary" href="{{baseUrl}}/api/{{apiMetadata.apiInfo.apiName}}/tryout">Try Out</a>
         {{else}}
-          <a type="button" class="common-btn-primary" href="http://localhost:9090/apiMetadata/apiDefinition?orgName=ACME&apiID=NavigationAPI">Download</a>
+          <a type="button" class="common-btn-primary" href="{{{schemaUrl}}}">Download</a>
         {{/in}}
       </div>
     </div>
