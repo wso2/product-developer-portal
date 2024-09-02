@@ -12,7 +12,7 @@
         <h4>{{apiMetadata.apiInfo.apiName}}</h4>
         <span class="badge api-badge-custom1">{{apiMetadata.apiInfo.apiCategory}}</span>
       </div>
-      <p>V {{apiMetadata.apiInfo.apiVersion}}</p>
+      <p> {{apiMetadata.apiInfo.apiVersion}}</p>
       <p class="api-desciption">{{apiMetadata.apiInfo.apiDescription}}</p>
       <div class="api-tags">
         {{#apiMetadata.apiInfo.tags}}
@@ -20,7 +20,11 @@
         {{/apiMetadata.apiInfo.tags}}
       </div>
       <div class="api-details-btn ">
-        <a type="button" class="common-btn-primary" href="{{baseUrl}}/api/{{apiMetadata.apiInfo.apiName}}/tryout">Try Out</a>
+        {{#in apiMetadata.apiInfo.apiType values="REST,AsyncAPI,GraphQL"}}
+          <a type="button" class="common-btn-primary" href="{{baseUrl}}/api/{{apiMetadata.apiInfo.apiName}}/tryout">Try Out</a>
+        {{else}}
+          <a type="button" class="common-btn-primary" href="{{{schemaUrl}}}" download>Download</a>
+        {{/in}}
       </div>
     </div>
   </div>
