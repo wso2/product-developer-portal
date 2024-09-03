@@ -1,0 +1,30 @@
+{
+  "apiInfo": {
+    "apiName": "NavigationAPI",
+    "orgName": "ACME",
+    "apiCategory": "Transportation",
+    "tags": ["transport", "activities", "reservations"],
+    "apiDescription": "API for retrieving navigation data, including routes, GPS coordinates, traffic updates, and real-time directions.",
+    "apiVersion": "3.0.1",
+    "apiType": "AsyncAPI",
+    "additionalProperties": {
+      "documentationUrl": "https://acme.com/docs/navigation-api"
+    },
+    "apiArtifacts": {
+      "apiImages": {
+        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/navigation-mini.jpeg"
+      }
+    }
+  },
+  "throttlingPolicies": [
+    {
+      "type": "rateLimit",
+      "policyName": "Basic Rate Limit",
+      "description": "Limits requests to 500 per hour."
+    }
+  ],
+  "serverUrl": {
+    "sandboxUrl": "https://sandbox.acme.com/api/v1/navigation",
+    "productionUrl": "https://api.acme.com/v1/navigation"
+  }
+}

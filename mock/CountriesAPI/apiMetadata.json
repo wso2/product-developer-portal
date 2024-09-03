@@ -1,0 +1,30 @@
+{
+  "apiInfo": {
+    "apiName": "CountriesAPI",
+    "orgName": "GlobalData",
+    "apiCategory": "Geography",
+    "tags": ["countries", "capitals", "population", "continents"],
+    "apiDescription": "API for retrieving information about countries, their capitals, population, and other geographical data.",
+    "apiVersion": "2.5.0",
+    "apiType": "GraphQL",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
+    },
+    "apiArtifacts": {
+      "apiImages": {
+        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/leisure.jpeg"
+      }
+    }
+  },
+  "throttlingPolicies": [
+    {
+      "type": "rateLimit",
+      "policyName": "Basic Rate Limit",
+      "description": "Allows up to 1000 requests per day."
+    }
+  ],
+  "serverUrl": {
+    "sandboxUrl": "https://countries.trevorblades.com/graphql",
+    "productionUrl": "https://countries.trevorblades.com/graphql"
+  }
+}
