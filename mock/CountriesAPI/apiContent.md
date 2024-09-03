@@ -1,6 +1,6 @@
 ## Overview
 
-The **Countries API** is a RESTful web service provided by **GlobalData** that allows developers to access detailed information about countries, including their capitals, populations, continents, and other geographical data. The API is designed to be simple, flexible, and easy to integrate into various applications.
+The **Countries API** is a flexible and efficient web service provided by GlobalData that allows developers to query detailed information about countries through a unified GraphQL interface. This API enables users to request specific fields and nested data about countries, including their capitals, populations, continents, and other geographical information. The API is designed to be intuitive and developer-friendly, offering a rich query language for precise data retrieval and integration into various applications.
 
 - **API Name**: CountriesAPI
 - **Organization**: GlobalData

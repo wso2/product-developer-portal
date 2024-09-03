@@ -1,7 +1,7 @@
 {
   "apiInfo": {
     "apiName": "LeisureActivitiesAPI",
-    "orgName": "ABCOrganization",
+    "orgName": "ACME",
     "apiCategory": "Transportation",
     "tags": [
       "leisure",
@@ -11,9 +11,12 @@
     "apiDescription": "API for retrieving information about leisure activities and managing reservations",
     "apiVersion": "2.1.0",
     "apiType": "SOAP",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
+    },
     "apiArtifacts": {
       "apiImages": {
-        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/leisure.jpeg"
+        "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/attractions.jpeg"
       }
     }
   },
