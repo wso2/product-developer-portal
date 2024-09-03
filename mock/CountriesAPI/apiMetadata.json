@@ -1,7 +1,7 @@
 {
   "apiInfo": {
     "apiName": "CountriesAPI",
-    "orgName": "GlobalData",
+    "orgName": "ACME",
     "apiCategory": "Geography",
     "tags": ["countries", "capitals", "population", "continents"],
     "apiDescription": "API for retrieving information about countries, their capitals, population, and other geographical data.",
