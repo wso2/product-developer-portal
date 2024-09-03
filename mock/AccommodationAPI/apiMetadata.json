@@ -1,6 +1,7 @@
 {
   "apiInfo": {
     "apiName": "AccommodationAPI",
+    "orgName": "ACME",
     "apiCategory": "Transportation",
     "tags": [
       "leisure",
@@ -10,6 +11,9 @@
     "apiDescription": "API for managing accommodations and reservations in a specified city",
     "apiVersion": "1.1.0",
     "apiType": "REST",
+    "additionalProperties": {
+      "documentationUrl": "https://globaldata.com/docs/countries-api"
+    },
     "apiArtifacts": {
       "apiImages": {
         "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/hotel-availability.jpeg"
