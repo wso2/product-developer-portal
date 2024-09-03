@@ -53,7 +53,7 @@ java_pid=$!  # Capture the process ID of the Java process
 
 # Start the Node.js application
 echo "Starting Devportal application..."
-if [ "$tenant" == "single" ]; then
+if [ "$tenant" == "single" ] || [ "$tenant" == "dev" ]; then
     npm run build-css --watch & node ../node_modules/devportal-webapp/src/single-tenant.js
 else
     node ../node_modules/devportal-webapp/src/multi-tenant.js
