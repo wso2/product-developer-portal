@@ -16,6 +16,7 @@ DROP TABLE IF EXISTS "Organization";
 DROP TABLE IF EXISTS "ApiMetadata";
 DROP TABLE IF EXISTS "RateLimitingPolicy";
 DROP TABLE IF EXISTS "Application";
+
 CREATE TABLE "Application" (
 	"appId" VARCHAR(191) NOT NULL,
 	"applicationName" VARCHAR(191) NOT NULL,
