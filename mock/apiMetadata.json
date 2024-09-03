@@ -10,8 +10,8 @@
             ],
             "authenticate": true,
             "apiDescription": "API for managing accommodations and reservations in a specified city",
-            "apiVersion" : "1.1.0",
-            "apiType" : "REST",
+            "apiVersion": "1.1.0",
+            "apiType": "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Accommodation API",
@@ -21,9 +21,69 @@
             },
             "apiArtifacts": {
                 "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ABCOrganization/api.svg"
+                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/hotel-availability.jpeg"
                 }
             }
+        }
+    },
+    {
+        "apiInfo": {
+            "apiName": "CountriesAPI",
+            "orgName": "GlobalData",
+            "apiCategory": "Geography",
+            "tags": ["countries", "capitals", "population", "continents"],
+            "apiDescription": "API for retrieving information about countries, their capitals, population, and other geographical data.",
+            "apiVersion": "2.5.0",
+            "apiType": "GraphQL",
+            "additionalProperties": {
+                "documentationUrl": "https://globaldata.com/docs/countries-api"
+            },
+            "apiArtifacts": {
+                "apiImages": {
+                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/leisure.jpeg"
+                }
+            }
+        },
+        "throttlingPolicies": [
+            {
+                "type": "rateLimit",
+                "policyName": "Basic Rate Limit",
+                "description": "Allows up to 1000 requests per day."
+            }
+        ],
+        "serverUrl": {
+            "sandboxUrl": "https://countries.trevorblades.com/graphql",
+            "productionUrl": "https://countries.trevorblades.com/graphql"
+        }
+    },
+    {
+        "apiInfo": {
+          "apiName": "NavigationAPI",
+          "orgName": "ACME",
+          "apiCategory": "Transportation",
+          "tags": ["transport", "activities", "reservations"],
+          "apiDescription": "API for retrieving navigation data, including routes, GPS coordinates, traffic updates, and real-time directions.",
+          "apiVersion": "3.0.1",
+          "apiType": "AsyncAPI",
+          "additionalProperties": {
+            "documentationUrl": "https://acme.com/docs/navigation-api"
+          },
+          "apiArtifacts": {
+            "apiImages": {
+                "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/navigation-mini.jpeg"
+            }
+          }
+        },
+        "throttlingPolicies": [
+          {
+            "type": "rateLimit",
+            "policyName": "Basic Rate Limit",
+            "description": "Limits requests to 500 per hour."
+          }
+        ],
+        "serverUrl": {
+          "sandboxUrl": "https://sandbox.acme.com/api/v1/navigation",
+          "productionUrl": "https://api.acme.com/v1/navigation"
         }
     },
     {
@@ -35,35 +95,9 @@
                 "activities",
                 "reservations"
             ],
-            "apiDescription": "API for retrieving information about leisure activities and managing reservations",
-            "apiVersion" : "2.1.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Leisure Activities API",
-                    "description": "API for retrieving information about leisure activities and managing reservations",
-                    "version": "2.1.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/leisure.jpeg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
-            "apiName": "FamousAttractionsAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
             "apiDescription": "API for retrieving information about famous attractions in various cities",
-            "apiVersion" : "2.0.0",
-            "apiType" : "REST",
+            "apiVersion": "2.0.0",
+            "apiType": "REST",
             "openApiDefinition": {
                 "info": {
                     "title": "Famous Attractions API",
@@ -77,137 +111,5 @@
                 }
             }
         }
-    },
-    {
-        "apiInfo": {
-            "apiName": "HotelAvailabilityAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "apiDescription": "API for checking hotel availability and managing hotel reservations in a specified city",
-            "apiVersion" : "1.1.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Hotel Availability API",
-                    "description": "API for checking hotel availability and managing hotel reservations in a specified city",
-                    "version": "1.1.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/hotel-availability.jpeg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
-            "apiName": "AccommodationAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "authenticate": true,
-            "apiDescription": "API for managing accommodations and reservations in a specified city",
-            "apiVersion" : "1.0.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Accommodation API",
-                    "description": "API for managing accommodations and reservations in a specified city",
-                    "version": "1.0.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ABCOrganization/api.svg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
-            "apiName": "LeisureActivitiesAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "apiDescription": "API for retrieving information about leisure activities and managing reservations",
-            "apiVersion" : "1.0.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Leisure Activities API",
-                    "description": "API for retrieving information about leisure activities and managing reservations",
-                    "version": "1.0.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/leisure.jpeg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
-            "apiName": "FamousAttractionsAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "apiDescription": "API for retrieving information about famous attractions in various cities",
-            "apiVersion" : "1.0.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Famous Attractions API",
-                    "description": "API for retrieving information about famous attractions in various cities",
-                    "version": "1.0.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/attractions.jpeg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
-            "apiName": "HotelAvailabilityAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "apiDescription": "API for checking hotel availability and managing hotel reservations in a specified city",
-            "apiVersion" : "1.0.0",
-            "apiType" : "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Hotel Availability API",
-                    "description": "API for checking hotel availability and managing hotel reservations in a specified city",
-                    "version": "1.0.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/hotel-availability.jpeg"
-                }
-            }
-        }
     }
-   
 ]
