@@ -58,32 +58,6 @@
     },
     {
         "apiInfo": {
-            "apiName": "LeisureActivitiesAPI",
-            "apiCategory": "Travel",
-            "tags": [
-                "leisure",
-                "activities",
-                "reservations"
-            ],
-            "apiDescription": "API for retrieving information about famous attractions in various cities",
-            "apiVersion": "2.0.0",
-            "apiType": "REST",
-            "openApiDefinition": {
-                "info": {
-                    "title": "Famous Attractions API",
-                    "description": "API for retrieving information about famous attractions in various cities",
-                    "version": "2.0.0"
-                }
-            },
-            "apiArtifacts": {
-                "apiImages": {
-                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/attractions.jpeg"
-                }
-            }
-        }
-    },
-    {
-        "apiInfo": {
           "apiName": "NavigationAPI",
           "orgName": "ACME",
           "apiCategory": "Transportation",
@@ -110,6 +84,32 @@
         "serverUrl": {
           "sandboxUrl": "https://sandbox.acme.com/api/v1/navigation",
           "productionUrl": "https://api.acme.com/v1/navigation"
+        }
+    },
+    {
+        "apiInfo": {
+            "apiName": "LeisureActivitiesAPI",
+            "apiCategory": "Travel",
+            "tags": [
+                "leisure",
+                "activities",
+                "reservations"
+            ],
+            "apiDescription": "API for retrieving information about famous attractions in various cities",
+            "apiVersion": "2.0.0",
+            "apiType": "REST",
+            "openApiDefinition": {
+                "info": {
+                    "title": "Famous Attractions API",
+                    "description": "API for retrieving information about famous attractions in various cities",
+                    "version": "2.0.0"
+                }
+            },
+            "apiArtifacts": {
+                "apiImages": {
+                    "api-icon": "https://d30n1aq29wj74v.cloudfront.net/ACBOrganization/resources/images/attractions.jpeg"
+                }
+            }
         }
     }
 ]
