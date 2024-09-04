@@ -92,7 +92,7 @@
                \"productionUrl\": \"https://taxi-navigation.mnm.abc.com\"
             }
          }"; type=application/json' \
-      --form 'api-definition={api-definition file}'
+      --form 'api-definition=@"{api-definition file}"'
    ```
 -  The apiType values include REST, AsyncAPI, GraphQL or SOAP
 
@@ -110,10 +110,18 @@
    ```
 - Run the following command to upload the content
    ```bash
-   curl --location 'http://localhost:9090/apiMetadata/apiContent?orgName=ABCOrg&apiName=AccommodationAPI' \
+   curl --location 'http://localhost:9090/apiMetadata/apiContent?orgName=ACME&apiName=AccommodationAPI' \
    --header 'Content-Type: application/zip' \
-   --data '{zip folder}'
+   --data '@{path to zip folder}'
    ```
+- Optionally, to display more advanced styling for the api-landing page, the following api call can be used to upload a hbs content.
+  The format of the zip file is the same as above, with the content folder including a api-content.hbs.
+
+  ```bash
+  curl --location 'http://localhost:8080/admin/additionalAPIContent?orgName=ACME&apiName=AccommodationAPI' \
+  --header 'Content-Type: application/zip' \
+  --data '@{path to zip folder}'
+  ```
 ***Multi Tenant***
 
 - To change the content and design of the developer portal, run the following command
