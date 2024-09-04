@@ -2,7 +2,7 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.hero-section-apilisting{
+.hero-section-apilisting {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +11,11 @@ body {
   height: auto;
 }
 
-.apilist-hero-container{
+.apilist-hero-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   text-align: center;
-  margin: 30px 0;
+  margin-top: 30px;
 }
 
 .apilist-hero-content h1,
@@ -25,17 +25,20 @@ body {
 }
 
 .apilist-hero-content h1 {
-  font-size: 36px;
+  font-size: 35px;
   font-weight: bold;
 }
 
 .apilist-hero-content p {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 24px;
 }
 
+.apilist-hero-header{
+  max-width: 800px;
+}
 .apilist-hero-content span {
-  font-size: 36px;
+  font-size: 35px;
   margin-bottom: 20px;
   color: var(--light-color);
 }
@@ -44,9 +47,9 @@ body {
   margin: 40px 0;
   text-align: center;
   display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .api-list-header {
@@ -55,7 +58,7 @@ body {
   margin: 3px;
 }
 
-.api-list-subheader{
+.api-list-subheader {
   font-size: 16px;
 }
 
@@ -132,6 +135,10 @@ body {
   color: var(--main-text-color);
 }
 
+.form-check-input{
+  border-color: var(--notselect-star-color);
+}
+
 hr {
   margin-top: 0;
   margin-bottom: 10px;
@@ -164,7 +171,7 @@ hr {
 
 .api-card-body {
   padding: 0;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .api-card-title {
@@ -181,15 +188,16 @@ hr {
   line-height: 1.5;
 }
 
-.api-tags {
+.apilisting-tags {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 10px;
 }
 
 .badge-custom1 {
   border: 1px solid var(--border-colour-primary);
-  background-color: #eff6ff;
+  background-color: var(--main-bg-color);
   color: var(--border-colour-primary);
   margin: 2px 5px 20px 0;
 }
@@ -203,7 +211,7 @@ hr {
 }
 
 .apibtn-container {
-  margin-top: 30px;
+  margin: 5px 0;
 }
 .apilistbtn-primary,
 .apilistbtn-secondary {
@@ -237,5 +245,27 @@ hr {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 3px; 
+  margin-bottom: 3px;
+}
+
+.star-rating {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.star {
+  font-size: 15px;
+  color: var(--border-colour-primary);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.star:hover,
+.star.selected {
+  color: var(--warning-color);
+}
+
+.star:hover,
+.star.noselected {
+  color: var(--notselect-star-color);
 }
