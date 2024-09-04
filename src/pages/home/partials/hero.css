@@ -5,42 +5,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
   background-color: var(--primary-color);
   height: auto;
 }
 
-.container {
+.hero-container {
   width: 100%;
   max-width: 900px;
   text-align: center;
   margin-top: 150px;
 }
 
-.content {
+.hero-content {
   margin-bottom: 60px;
 }
 
-.subtitle {
+.hero-subtitle {
   margin-bottom: 36px;
 }
-.content h1,
-.content p,
-.content span {
+.hero-content h1,
+.hero-content p,
+.hero-content span {
   color: var(--font-colour-primary);
 }
 
-.content h1 {
+.hero-content h1 {
   font-size: 48px;
   font-weight: bold;
 }
 
-.content p {
+.hero-content p {
   font-size: 18px;
   line-height: 24px;
 }
 
-.content span {
+.hero-content span {
   font-size: 48px;
   margin-bottom: 20px;
   color: var(--light-color);

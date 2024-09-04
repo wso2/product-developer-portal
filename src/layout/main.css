@@ -35,6 +35,10 @@
   --font-family-mono: "Roboto", monospace;
 }
 
+body {
+  padding-top: 60px;
+}
+
 /* primary button */
 .common-btn-primary {
   text-decoration: none;
