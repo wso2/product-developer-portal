@@ -11,12 +11,6 @@ port=$(sed -n 's/^port = "\([^"]*\)"/\1/p' artifacts/config.toml)
 # Export password to avoid psql prompt
 export PGPASSWORD=$password
 
-# Run psql command
-
-if [ "$tenant" == "dev" ]; then
-    psql -q -U "$user" -d "$database" -h "$host" -p "$port" -f artifacts/data-dump.sql
-fi
-
 # Unset the password variable for security
 unset PGPASSWORD
 

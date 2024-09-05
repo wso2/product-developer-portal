@@ -24,24 +24,17 @@
 
 **Start the Project**
 
-***Single Tenant***
+   - To populate the DB with mock data, run the data-dump.sql in the artifacts folder.
+
+   - To create tables without mock data, run the script.sql in the artifacts folder.
 
    - To start the project and explore with mock data, run the following command.
       ```bash
-     npm run single-tenant-dev
+     npm run devportal
      ```
-   - Navigate to 'http://localhost:3000/ACME'
+   - If you started with a data-dump, navigate to 'http://localhost:3000/ACME' and explore the pages.
 
-   - Explore the pages.
-
-   - To start the project without any data, create a database and execute the script.sql under the artifacts folder
-
-   - Run the following command.
-      ```bash
-     npm run single-tenant
-     ```
-
-   - Create an organization
+   - If you started without data, first create an organization
       ```bash
      curl --location 'http://localhost:8080/admin/organisation' \
       --header 'Content-Type: application/json' \
@@ -55,6 +48,25 @@
          ]
       }'
      ```
+   - To try the login flow, create an OIDC application in the Identity Provider configured for the organization.
+   - Create an Identity Provider for the organization with the following information of the application created above.
+     ```bash
+      curl --location --request POST 'http://localhost:8080/admin/identityProvider?orgName=ACME' \
+      --header 'Content-Type: application/json' \
+      --data-raw '{
+         "issuer": "",
+         "authorizationURL": "",
+         "tokenURL": "",
+         "userInfoURL": "",
+         "clientId": "",
+         "callbackURL": "",
+         "scope": "",
+         "signUpURL": "",
+         "logoutURL" : "",
+         "logoutRedirectURI" : ""
+      }'
+      ```
+
    - Navigate to 'http://localhost:3000/{{orgName}}'
   
    - To change the design, edit the files in the pages, partials and layout folder and refresh.
@@ -92,13 +104,13 @@
                \"productionUrl\": \"https://taxi-navigation.mnm.abc.com\"
             }
          }"; type=application/json' \
-      --form 'api-definition={api-definition file}'
+      --form 'api-definition=@"{api-definition file}"'
    ```
 -  The apiType values include REST, AsyncAPI, GraphQL or SOAP
 
 -  This is a multi part request containing a json with metadata related to the API and a file attachement of the api schema definition file.
 
-- To upload the content to be displayed on the api-landing page, create a zip file with the folder structure as follows:
+-  To upload the content to be displayed on the api-landing page, create a zip file with the folder structure as follows:
    ```
    {API NAME}
    └───content
@@ -110,35 +122,18 @@
    ```
 - Run the following command to upload the content
    ```bash
-   curl --location 'http://localhost:9090/apiMetadata/apiContent?orgName=ABCOrg&apiName=AccommodationAPI' \
+   curl --location 'http://localhost:9090/apiMetadata/apiContent?orgName=ACME&apiName=AccommodationAPI' \
    --header 'Content-Type: application/zip' \
-   --data '{zip folder}'
+   --data '@{path to zip folder}'
    ```
-***Multi Tenant***
+- Optionally, to display more advanced styling for the api-landing page, the following api call can be used to upload a hbs content.
+  The format of the zip file is the same as above, with the content folder including a api-content.hbs.
 
-- To change the content and design of the developer portal, run the following command
-   ```bash
-   npm run design-mode
-   ```
-- This will start the application in http://localhost:3000
-
-- The apis in the mock folder will be visible in the api listing page.
-
-- To change the design, edit the files in the pages, partials and layout folder and refresh.
-
-- After all changes are done, run the following command
-    ```bash
-   npm run compress
-   ```
-- Run the curl commmands given in the single tenant mode section to create an organization and upload the organization content.
-
-- To create apis and upload the api content, the respective curl commands in the single tenant section can be run.
-
-- To start the application locally in multi tenant mode, run the following command:
-    ```bash
-   npm run multi-tenant
-   ```
-
+  ```bash
+  curl --location 'http://localhost:8080/admin/additionalAPIContent?orgName=ACME&apiName=AccommodationAPI' \
+  --header 'Content-Type: application/zip' \
+  --data '@{path to zip folder}'
+  ```
 
 ## Project Structure and Layout
 
