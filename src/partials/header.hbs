@@ -1,95 +1,64 @@
 <header>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
-  <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-logo" href="{{baseUrl}}">
-        <img
-          src="https://devportal-content.s3.amazonaws.com/ABCOrganization/Choreo+favicon+white.svg"
-          alt="Logo"
-        />
-      </a>
-      <div class="navbar-nav">
-        <a class="nav-link" aria-current="page" href="{{baseUrl}}/apis">APIs</a>
-      </div>
-      {{#if profile}}
-        <div
-          class="container-fluid nav justify-content-end d-none"
-          id="profile-section"
-        >
-          <div class="dropdown">
-            <a
-              class="nav-link dropdown-toggle profile-link"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <div class="profile-container">
-                <img
-                  src="/images/profile.svg"
-                  alt="Profile"
-                  class="profile-icon"
-                />
-                <span>Hi Divya</span>
-              </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-logo" href="{{baseUrl}}">
+                <img src="https://devportal-content.s3.amazonaws.com/ABCOrganization/Choreo+favicon+white.svg"
+                    alt="Logo" />
             </a>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navbarDropdown"
-            >
-              <li class="dropdown-item">
-                <div class="profile-info">
-                  <img src="/images/profile.svg" class="avatar" />
-                  <div class="user-info">
-                    <span class="user-name">Divya</span>
-                    <span class="user-email">divya@mail.com</span>
-                  </div>
+            <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="{{baseUrl}}/apis">APIs</a>
+            </div>
+            {{#if profile}}
+            <div class="container-fluid nav justify-content-end" id="profile-section">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle profile-link" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="profile-container">
+                            <img src="/images/profile.svg" alt="Profile" class="profile-icon" />
+                            <span>Hi {{profile.name}}</span>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li class="dropdown-item">
+                            <div class="profile-info">
+                                <img src="/images/profile.svg" class="avatar" />
+                                <div class="user-info">
+                                    <span class="user-name">{{profile.name}}</span>
+                                    <span class="user-email">{{profile.email}}</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-item">
+                            <i class="fas fa-cog"></i>
+                            <a href="#">Profile Settings</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <i class="fas fa-question-circle"></i>
+                            <a href="#">Help Center</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <i class="fas fa-arrow-up"></i>
+                            <a href="#">Upgrade Plan</a>
+                        </li>
+                        <li>
+                            <hr />
+                        </li>
+                        <li class="dropdown-item">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <a href="{{baseUrl}}/logout">Sign Out</a>
+                        </li>
+                    </ul>
                 </div>
-              </li>
-              <li class="dropdown-item">
-                <i class="fas fa-cog"></i>
-                <a href="#">Profile Settings</a>
-              </li>
-              <li class="dropdown-item">
-                <i class="fas fa-question-circle"></i>
-                <a href="#">Help Center</a>
-              </li>
-              <li class="dropdown-item">
-                <i class="fas fa-arrow-up"></i>
-                <a href="#">Upgrade Plan</a>
-              </li>
-              <li><hr /></li>
-              <li class="dropdown-item">
-                <i class="fas fa-sign-out-alt"></i>
-                <a href="#">Sign Out</a>
-              </li>
-            </ul>
-          </div>
+            </div>
+            {{else}}
+            <div class="container-fluid nav justify-content-end" id="auth-section">
+                <a class="btn btn-primary custom-signup-btn" id="signup-btn" href="javascript:void(0)"
+                    onclick="replaceAuthSection()">Sign Up</a>
+                <a class="btn btn-outline-info custom-login-btn" href="{{baseUrl}}/login">Log In</a>
+            </div>
+            {{/if}}
+            
         </div>
-      {{else}}
-        <div class="container-fluid nav justify-content-end" id="auth-section">
-          <a
-            class="btn btn-primary custom-signup-btn"
-            id="signup-btn"
-            href="javascript:void(0)"
-            onclick="replaceAuthSection()"
-          >Sign Up</a>
-          <a
-            class="btn btn-outline-info custom-login-btn"
-            href="{{baseUrl}}/login"
-          >Log In</a>
-        </div>
-      {{/if}}
-    </div>
-  </nav>
+    </nav>
 </header>
-
-<script>
-  function replaceAuthSection() {
-  document.getElementById('auth-section').classList.add('d-none');
-  document.getElementById('profile-section').classList.remove('d-none'); }
-</script>

@@ -15,10 +15,12 @@
   width: 80px;
   height: 50px;
 }
+
 .navbar-nav {
   display: flex;
   justify-content: flex-start;
 }
+
 .navbar-nav a {
   font-size: 14px;
   justify-content: center;
@@ -38,6 +40,7 @@
 .navbar-nav .nav-link.active {
   color: #cce7ff;
 }
+
 .navbar-nav .dropdown-menu {
   background-color: var(--font-colour-primary);
   border: none;
@@ -57,7 +60,7 @@
   color: var(--font-colour-primary);
   border-radius: 25px;
   padding: 8px 20px;
-  margin-right: 5px;
+  margin-right: 10px;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
