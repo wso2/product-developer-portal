@@ -17,6 +17,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   margin-bottom: 10px;
+  min-height: 200px;
 }
 
 .card-body {
@@ -78,4 +79,10 @@
   color: #666;
   font-size: 14px;
   color: var(--main-text-color);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

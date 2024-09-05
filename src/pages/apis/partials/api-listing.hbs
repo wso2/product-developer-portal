@@ -2,10 +2,11 @@
   <div class="col-lg-12 hero-section-apilisting">
     <div class="apilist-hero-container anim">
       <div class="apilist-hero-content">
-        <h1>Explore
-          <span>best APIs</span>
-          and join us in building innovative applications.
-        </h1>
+        <div class="apilist-hero-header">
+          <h1>Explore
+            <span>best APIs</span>
+            and join us in building innovative applications.</h1>
+        </div>
         <div class="apilist-hero-subtitle">
           <p>
             Utilize our APIs to automate processes, drive innovation, and reach
@@ -80,37 +81,60 @@
           </div>
         </div>
       </div>
-
       <div class="col-lg-10">
         <div class="row list-items">
           <div class="col">
             <div class="row list-items container-fluid">
               {{#apiMetadata}}
-              <div class="card dev-card api-card lg-3">
-                <img src={{apiInfo.apiArtifacts.apiImages.api-icon}} class="api-card-img" alt="..." />
-                <div class="api-card-body">
-                  <h5 class="api-card-title">{{apiInfo.apiName}}</h5>
-                  <p>V {{apiInfo.apiVersion}}</p>
-                  <span class="badge badge-custom1">{{apiInfo.apiType}}</span>
-                  <span class="badge badge-custom1">{{apiInfo.apiCategory}}</span>
-                  <p>{{apiInfo.apiDescription}}</p>
-                  <div class="row list-items">
-                    <div class="api-tags">
-                      {{#apiInfo.tags}}
-                      <span class="badge badge-custom2">{{this}}</span>
-                      {{/apiInfo.tags}}
+                <div class="card dev-card api-card lg-3 d-flex flex-column">
+                  <img
+                    src={{apiInfo.apiArtifacts.apiImages.api-icon}}
+                    class="api-card-img"
+                    alt="..."
+                  />
+                  <div class="api-card-body flex-grow-1">
+                    <h5 class="api-card-title">{{apiInfo.apiName}}</h5>
+                    <p>V {{apiInfo.apiVersion}}</p>
+                    <div class="row">
+                      <div class="star-rating">
+                        {{#apiInfo.ratings}}
+                          <span
+                            class="star selected"
+                            data-value="1"
+                          >&#9733;</span>
+                        {{/apiInfo.ratings}}
+                        {{#apiInfo.ratingsNoFill}}
+                          <span
+                            class="star noselected"
+                            data-value="1"
+                          >&#9733;</span>
+                        {{/apiInfo.ratingsNoFill}}
+                      </div>
+                    </div>
+                    <span
+                      class="badge badge-custom1"
+                    >{{apiInfo.apiCategory}}</span>
+                    <p>{{apiInfo.apiDescription}}</p>
+                    <div class="row list-items">
+                      <div class="apilisting-tags">
+                        {{#apiInfo.tags}}
+                          <span class="badge badge-custom2">{{this}}</span>
+                        {{/apiInfo.tags}}
+                      </div>
                     </div>
                   </div>
-                  <div class="apibtn-container">
+                  <div class="apibtn-container mt-auto">
                     <div class="row">
                       <div class="col-5 text-left">
-                        <a type="button" class="btn apilistbtn-primary"
-                          href="{{baseUrl}}/api/{{apiInfo.apiName}}">Overview</a>
+                        <a
+                          type="button"
+                          class="btn apilistbtn-primary"
+                          href="{{baseUrl}}/api/{{apiInfo.apiName}}"
+                        >Overview</a>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
               {{/apiMetadata}}
             </div>
           </div>
