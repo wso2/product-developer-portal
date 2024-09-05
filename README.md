@@ -25,23 +25,17 @@
 **Start the Project**
 
 ***Single Tenant***
+   - To populate the DB with mock data, run the data-dump.sql in the artifacts folder.
+
+   - To create tables without mock data, run the script.sql in the artifacts folder.
 
    - To start the project and explore with mock data, run the following command.
       ```bash
-     npm run single-tenant-dev
+     npm run devportal
      ```
-   - Navigate to 'http://localhost:3000/ACME'
+   - If you started with a data-dump, navigate to 'http://localhost:3000/ACME' and explore the pages.
 
-   - Explore the pages.
-
-   - To start the project without any data, create a database and execute the script.sql under the artifacts folder
-
-   - Run the following command.
-      ```bash
-     npm run single-tenant
-     ```
-
-   - Create an organization
+   - If you started without data, first create an organization
       ```bash
      curl --location 'http://localhost:8080/admin/organisation' \
       --header 'Content-Type: application/json' \
@@ -55,6 +49,22 @@
          ]
       }'
      ```
+   - To try the login flow, create an Identity Provider for the organization with the following information
+     ```bash
+      curl --location --request POST 'http://localhost:8080/admin/identityProvider?orgName=ACME' \
+      --header 'Content-Type: application/json' \
+      --data-raw '{
+         "issuer": "https://api.asgardeo.io/t/choreotestorganization/oauth2/token",
+         "authorizationURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/authorize",
+         "tokenURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/token",
+         "userInfoURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/userinfo",
+         "clientId": "439EbJeciATjJc3TiYGqkYB_ksga",
+         "callbackURL": "http://localhost:3000/ACME/callback",
+         "scope": "",
+         "signUpURL": "https://accounts.asgardeo.io/t/choreotestorganization/accountrecoveryendpoint/register.do"
+      }'
+      ```
+
    - Navigate to 'http://localhost:3000/{{orgName}}'
   
    - To change the design, edit the files in the pages, partials and layout folder and refresh.
@@ -98,7 +108,7 @@
 
 -  This is a multi part request containing a json with metadata related to the API and a file attachement of the api schema definition file.
 
-- To upload the content to be displayed on the api-landing page, create a zip file with the folder structure as follows:
+-  To upload the content to be displayed on the api-landing page, create a zip file with the folder structure as follows:
    ```
    {API NAME}
    └───content
@@ -126,7 +136,7 @@
 
 - To change the content and design of the developer portal, run the following command
    ```bash
-   npm run design-mode
+   npm run devportal-design
    ```
 - This will start the application in http://localhost:3000
 
@@ -144,7 +154,7 @@
 
 - To start the application locally in multi tenant mode, run the following command:
     ```bash
-   npm run multi-tenant
+   npm run devportal-multi
    ```
 
 

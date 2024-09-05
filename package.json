@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Devportal developer webapp",
   "scripts": {
-    "design-mode": "npm run build-css --watch & node node_modules/devportal-webapp/src/dev-server.js",
-    "single-tenant-dev": "sh startup.sh dev",
-    "single-tenant": "sh startup.sh single",
-    "multi-tenant": "sh startup.sh",
+    "devportal-design": "npm run build-css --watch & node node_modules/devportal-webapp/src/dev-server.js",
+    "devportal": "sh startup.sh single",
+    "devportal-multi": "sh startup.sh",
     "compress": "sh compress.sh",
     "build-css": "node watcher.js"
   },
