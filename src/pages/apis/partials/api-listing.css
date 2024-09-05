@@ -2,11 +2,47 @@ body {
   background-color: var(--main-bg-color);
 }
 
-.search-content {
-  background-color: var(--main-bg-color);
-  margin-top: 70px;
+.hero-section-apilisting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  background-color: var(--primary-color);
+  height: auto;
+}
+
+.apilist-hero-container{
+  width: 100%;
+  max-width: 900px;
   text-align: center;
-  padding: 0 45px;
+  margin: 30px 0;
+}
+
+.apilist-hero-content h1,
+.apilist-hero-content p,
+.apilist-hero-content span {
+  color: var(--font-colour-primary);
+}
+
+.apilist-hero-content h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.apilist-hero-content p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.apilist-hero-content span {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--light-color);
+}
+
+.apilist-hero-content {
+  margin: 40px 0;
+  text-align: center;
   display: flex;
   flex-direction: column; 
   align-items: center;    
@@ -33,7 +69,7 @@ body {
   display: flex;
   align-items: center;
   background-color: transparent;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-colour-secondary);
   padding: 10px 15px;
   border-radius: 25px;
   width: 100%;
@@ -47,15 +83,20 @@ body {
   margin-left: 10px;
   font-size: 14px;
   background-color: transparent;
+  color: var(--main-bg-color);
+}
+
+#query::placeholder {
+  color: var(--main-bg-color);
+  opacity: 0.6;
 }
 
 .bi-search {
-  color: #ccc;
+  color: var(--main-bg-color);
   font-size: 20px;
   position: relative;
   top: -2px;
 }
-
 
 .apilist-container {
   padding: 10px 65px;
