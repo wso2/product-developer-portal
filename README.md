@@ -24,7 +24,6 @@
 
 **Start the Project**
 
-***Single Tenant***
    - To populate the DB with mock data, run the data-dump.sql in the artifacts folder.
 
    - To create tables without mock data, run the script.sql in the artifacts folder.
@@ -49,19 +48,22 @@
          ]
       }'
      ```
-   - To try the login flow, create an Identity Provider for the organization with the following information
+   - To try the login flow, create an OIDC application in the Identity Provider configured for the organization.
+   - Create an Identity Provider for the organization with the following information of the application created above.
      ```bash
       curl --location --request POST 'http://localhost:8080/admin/identityProvider?orgName=ACME' \
       --header 'Content-Type: application/json' \
       --data-raw '{
-         "issuer": "https://api.asgardeo.io/t/choreotestorganization/oauth2/token",
-         "authorizationURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/authorize",
-         "tokenURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/token",
-         "userInfoURL": "https://api.asgardeo.io/t/choreotestorganization/oauth2/userinfo",
-         "clientId": "439EbJeciATjJc3TiYGqkYB_ksga",
-         "callbackURL": "http://localhost:3000/ACME/callback",
+         "issuer": "",
+         "authorizationURL": "",
+         "tokenURL": "",
+         "userInfoURL": "",
+         "clientId": "",
+         "callbackURL": "",
          "scope": "",
-         "signUpURL": "https://accounts.asgardeo.io/t/choreotestorganization/accountrecoveryendpoint/register.do"
+         "signUpURL": "",
+         "logoutURL" : "",
+         "logoutRedirectURI" : ""
       }'
       ```
 
@@ -132,31 +134,6 @@
   --header 'Content-Type: application/zip' \
   --data '@{path to zip folder}'
   ```
-***Multi Tenant***
-
-- To change the content and design of the developer portal, run the following command
-   ```bash
-   npm run devportal-design
-   ```
-- This will start the application in http://localhost:3000
-
-- The apis in the mock folder will be visible in the api listing page.
-
-- To change the design, edit the files in the pages, partials and layout folder and refresh.
-
-- After all changes are done, run the following command
-    ```bash
-   npm run compress
-   ```
-- Run the curl commmands given in the single tenant mode section to create an organization and upload the organization content.
-
-- To create apis and upload the api content, the respective curl commands in the single tenant section can be run.
-
-- To start the application locally in multi tenant mode, run the following command:
-    ```bash
-   npm run devportal-multi
-   ```
-
 
 ## Project Structure and Layout
 
