@@ -13,12 +13,15 @@
 @import '/styles/api-detail-banner.css';
 @import '/styles/tryout-banner.css';
 @import '/styles/api-content.css';
+@import '/styles/pricing.css';
 :root {
   --main-bg-color: #f7f8fb;
   --light-bg-color: #ffffff;
   --main-text-color: #40404b;
+  --light-text-color: #6b7280;
   --dark-text-color: #000000;
   --primary-color: #3e6ff2;
+  --primary-light-color: #CCD1F2;
   --secondary-color: #0f2751;
   --light-color: #ffc371;
   --dark-color: #0f3971;
@@ -36,8 +39,15 @@
   --font-family-mono: "Roboto", monospace;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
   padding-top: 60px;
+  overflow: auto;
+  height: 100%;
 }
 
 /* primary button */
