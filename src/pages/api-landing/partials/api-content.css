@@ -107,8 +107,6 @@
   color: var(--font-colour-primary);
 }
 
-/* styles of how it work */
-
 .howwork-content {
   padding: 60px 30px 40px 30px;
   background-color: var(--main-bg-color);
@@ -120,8 +118,13 @@
 }
 
 .custom-api-card {
-  padding: 10px;
-  margin: 0 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 275px;
 }
 
 .card-body {
