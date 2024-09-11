@@ -42,10 +42,10 @@
          "orgName": "ACME",
          "isPublic": false,
          "templateName" : "default",
-         "authenticatedPages": ["**/apis", "**/api/**"]
+         "authenticatedPages": []
       }'
      ```
-   - Add the URL patterns (using regular expressions) for the pages that require authentication to the authenticatedPages parameter.
+   - Add the URL patterns (using regular expressions) for the pages that require authentication to the authenticatedPages parameter. Eg: "**/apis", "**/api/**"
    - To try the login flow, create an OIDC application in the Identity Provider configured for the organization.
    - Create an Identity Provider for the organization with the following information of the application created above.
      ```bash
