@@ -2,6 +2,12 @@
 
 ## Steps to Set Up the Project
 
+**Prerequisites**
+   - Install postgresql.
+   - Create a database.
+   - Install java.
+   - Install node
+     
 **Fork and Clone the Repository**
    - Fork the repository to your GitHub account.
    - Clone the repository using:
@@ -14,10 +20,6 @@
      ```bash
      npm install
      ```
-**Prerequisites**
-   - Install postgresql.
-   - Create a database.
-   - Install java.
 
 **Configs**
    - In the Config.toml, under the devportal.store section, change the configs accordingly.
